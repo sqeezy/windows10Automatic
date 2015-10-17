@@ -1,4 +1,8 @@
 {
+  "push":
+  {
+    "name": "sqeezy/win10x64"
+  },
   "builders": [
     {
       "type": "virtualbox-iso",
@@ -20,7 +24,7 @@
       "shutdown_command": "C:/windows/system32/sysprep/sysprep.exe /generalize /oobe /unattend:C:/Windows/Panther/Unattend/unattend.xml /quiet /shutdown",
       "shutdown_timeout": "15m",
       "floppy_files": [
-        "answer_files/2012_r2{{user `core`}}/Autounattend.xml",
+        "answer_files/10/Autounattend.xml",
         "scripts/postunattend.xml",
         "scripts/boxstarter.ps1",
         "scripts/package.ps1"
@@ -48,7 +52,7 @@
       "shutdown_command": "C:/windows/system32/sysprep/sysprep.exe /generalize /oobe /unattend:C:/Windows/Panther/Unattend/unattend.xml /quiet /shutdown",
       "shutdown_timeout": "15m",
       "floppy_files": [
-        "answer_files/2012_r2{{user `core`}}/Autounattend.xml",
+        "answer_files/10/Autounattend.xml",
         "scripts/postunattend.xml",
         "scripts/boxstarter.ps1",
         "scripts/package.ps1"
@@ -59,13 +63,14 @@
     {
       "type": "vagrant",
       "keep_input_artifact": true,
-      "output": "windows2012r2min-{{.Provider}}.box",
+      "output": "win10x64.box",
       "vagrantfile_template": "vagrantfile-windows.template"
     },
     {
+      "name": "win10x64",
       "type": "atlas",
       "only": ["virtualbox-iso-atlas"],
-      "artifact": "mwrock/Windows2012R2{{user `core`}}",
+      "artifact": "sqeezy/win10x64",
       "artifact_type": "vagrant.box",
       "metadata": {
         "provider": "virtualbox",
@@ -74,9 +79,9 @@
     }
   ],
   "variables": {
-    "core": "",
     "headless": "false",
-    "iso_checksum": "849734f37346385dac2c101e4aacba4626bb141c",
+    "iso_checksum_type": "sha1",
+    "iso_checksum": "56ab095075be28a90bc0b510835280975c6bb2ce",
     "iso_url": "http://care.dlservice.microsoft.com/dl/download/C/3/9/C399EEA8-135D-4207-92C9-6AAB3259F6EF/10240.16384.150709-1700.TH1_CLIENTENTERPRISEEVAL_OEMRET_X64FRE_EN-US.ISO"
   }
 }
