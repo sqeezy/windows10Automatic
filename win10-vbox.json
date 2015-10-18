@@ -29,7 +29,8 @@
         "answer_files/10/Autounattend.xml",
         "scripts/postunattend.xml",
         "scripts/boxstarter.ps1",
-        "scripts/package.ps1"
+        "scripts/package.ps1",
+        "scripts/fixnetwork.ps1"
       ]
     },
     {
@@ -57,7 +58,8 @@
         "answer_files/10/Autounattend.xml",
         "scripts/postunattend.xml",
         "scripts/boxstarter.ps1",
-        "scripts/package.ps1"
+        "scripts/package.ps1",
+        "scripts/fixnetwork.ps1"
       ]
     }
   ],
