@@ -23,7 +23,7 @@
       "winrm_password": "vagrant",
       "winrm_timeout": "{{ user `winrm_timeout` }}",
       "guest_additions_mode": "{{ user `guest_additions_mode` }}",
-      "shutdown_command": "C:/windows/system32/sysprep/sysprep.exe /generalize /oobe /unattend:C:/Windows/Panther/Unattend/unattend.xml /quiet /shutdown",
+      "shutdown_command": "shutdown /t 5 /s",
       "shutdown_timeout": "15m",
       "floppy_files": [
         "answer_files/10/Autounattend.xml",
@@ -52,7 +52,7 @@
       "winrm_password": "vagrant",
       "winrm_timeout": "{{ user `winrm_timeout` }}",
       "guest_additions_mode": "{{ user `guest_additions_mode` }}",
-      "shutdown_command": "C:/windows/system32/sysprep/sysprep.exe /generalize /oobe /unattend:C:/Windows/Panther/Unattend/unattend.xml /quiet /shutdown",
+      "shutdown_command": "shutdown /t 5 /s",
       "shutdown_timeout": "15m",
       "floppy_files": [
         "answer_files/10/Autounattend.xml",
