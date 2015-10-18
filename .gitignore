@@ -1,4 +1,5 @@
 iso
-output-virtualbox-iso
+output-virtualbox-iso*
+*.box
 *.iso
 .DS_STORE
