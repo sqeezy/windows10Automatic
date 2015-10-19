@@ -1,4 +1,8 @@
 {
+  "push":
+  {
+    "name": "sqeezy/Windows2012R2"
+  },
   "builders": [
     {
       "type": "virtualbox-iso",
@@ -65,7 +69,7 @@
     {
       "type": "atlas",
       "only": ["virtualbox-iso-atlas"],
-      "artifact": "mwrock/Windows2012R2{{user `core`}}",
+      "artifact": "sqeezy/Windows2012R2{{user `core`}}",
       "artifact_type": "vagrant.box",
       "metadata": {
         "provider": "virtualbox",
