@@ -1,2 +1,2 @@
 # windows10Automatic
-A automatic setup of a windows 10 box via vagrant and other tools.
+A automatic setup of a number of different windows boxes via vagrant and other tools.
