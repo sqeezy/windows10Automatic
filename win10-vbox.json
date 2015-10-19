@@ -5,34 +5,6 @@
   },
   "builders": [
     {
-      "name": "virtualbox-iso-local",
-      "type": "virtualbox-iso",
-      "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--memory", "2048" ],
-        [ "modifyvm", "{{.Name}}", "--vram", "36" ],
-        [ "modifyvm", "{{.Name}}", "--cpus", "2" ]
-      ],
-      "guest_os_type": "Windows10_64",
-      "headless": "{{ user `headless` }}",
-      "iso_url": "{{ user `iso_url` }}",
-      "iso_checksum": "{{ user `iso_checksum` }}",
-      "iso_checksum_type": "{{ user `iso_checksum_type` }}",
-      "communicator": "winrm",
-      "winrm_username": "vagrant",
-      "winrm_password": "vagrant",
-      "winrm_timeout": "{{ user `winrm_timeout` }}",
-      "guest_additions_mode": "{{ user `guest_additions_mode` }}",
-      "shutdown_command": "shutdown /t 5 /s",
-      "shutdown_timeout": "15m",
-      "floppy_files": [
-        "answer_files/10/Autounattend.xml",
-        "scripts/postunattend.xml",
-        "scripts/boxstarter.ps1",
-        "scripts/package.ps1",
-        "scripts/fixnetwork.ps1"
-      ]
-    },
-    {
       "name": "virtualbox-iso-atlas",
       "type": "virtualbox-iso",
       "vboxmanage": [
