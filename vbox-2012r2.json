@@ -7,7 +7,6 @@
     {
       "type": "virtualbox-iso",
       "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--natpf1", "guest_winrm,tcp,,55985,,5985" ],
         [ "modifyvm", "{{.Name}}", "--memory", "2048" ],
         [ "modifyvm", "{{.Name}}", "--vram", "36" ],
         [ "modifyvm", "{{.Name}}", "--cpus", "2" ]
@@ -21,6 +20,7 @@
       "winrm_username": "vagrant",
       "winrm_password": "vagrant",
       "winrm_timeout": "6h",
+      "winrm_port": "55985",
       "shutdown_command": "C:/windows/system32/sysprep/sysprep.exe /generalize /oobe /unattend:C:/Windows/Panther/Unattend/unattend.xml /quiet /shutdown",
       "shutdown_timeout": "15m",
       "floppy_files": [
@@ -34,7 +34,6 @@
       "name": "virtualbox-iso-atlas",
       "type": "virtualbox-iso",
       "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--natpf1", "guest_winrm,tcp,,55985,,5985" ],
         [ "modifyvm", "{{.Name}}", "--memory", "2048" ],
         [ "modifyvm", "{{.Name}}", "--vram", "36" ],
         [ "modifyvm", "{{.Name}}", "--cpus", "2" ]
@@ -48,6 +47,7 @@
       "winrm_username": "vagrant",
       "winrm_password": "vagrant",
       "winrm_timeout": "6h",
+      "winrm_port": "55985",
       "shutdown_command": "C:/windows/system32/sysprep/sysprep.exe /generalize /oobe /unattend:C:/Windows/Panther/Unattend/unattend.xml /quiet /shutdown",
       "shutdown_timeout": "15m",
       "floppy_files": [
